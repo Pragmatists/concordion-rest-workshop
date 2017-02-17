@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:c="http://www.concordion.org/2007/concordion"
+      xmlns:r="http://pragmatists.github.io/concordion-rest-extension"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://pragmatists.github.io/concordion-rest-extension http://pragmatists.github.io/concordion-rest-extension/xsd/concordion-rest.xsd">
+<body class="container">
+
+<h2 class="page-header">API Specs</h2>
+
+<div class="panel panel-default" c:example="Hello World">
+    <r:request class="panel-body">
+        When I send
+        <r:get>/api/hello</r:get>
+        Then I should receive
+        <r:status>HTTP/1.1 200</r:status>
+        with body
+        <r:jsonResponse>
+            {
+                "hello": "World"
+            }
+        </r:jsonResponse>
+    </r:request>
+</div>
+
+</body>
+</html>
